@@ -1,3 +1,5 @@
+//Logic Challenge: Melee Ranged Grouping
+
 function meleeRangedGrouping (str) {
     //your code here
     if(str == '') {
@@ -64,6 +66,9 @@ function meleeRangedGrouping (str) {
     hasil.push(ranged, melee);
     return hasil;
 }
+
+// let hero="RazorInvokerMeepo";
+// let class="RangedRangerdMelee"
 
 // TEST CASE
 
