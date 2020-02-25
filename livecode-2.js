@@ -20,38 +20,25 @@ RULES:
 function parseString(string){
    //implementasi function disini!
    var result = {}
-   // PISAHKAN
-   var angkaString = []
-   var arrString = []
-   for(i = 0; i < string.length; i++) {
-      if ( string[i] == Number(string[i])) {
-        angkaString.push(string[i]);
-      }
-      else {
-      arrString.push(string[i]);
-      }
-   }
-  //  console.log(arrString)
-  //  console.log(angkaString)
 
-  for(i = 0; i < arrString.length; i++) {
-      if(result[arrString[i]] == null) {
-        result[arrString[i]] = 1;
+  for(i = 0; i < string.length; i++) {
+    if ( string[i] != Number(string[i])) {
+      if(result[string[i]] == null) {
+        result[string[i]] = 1;
       }
       else {
-        result[arrString[i]]++
+        result[string[i]]++
       }
+      console.log(result);
+    }
+
   }
 
   return result;
 
  }
 
-
-
  console.log(parseString("h3lloW0r1d")) // { h: 1, l: 2, o: 1, W: 1, r: 1, d: 1 }
  console.log(parseString("abcdefMlpo123")); //{ a: 1, b: 1, c: 1, d: 1, e: 1, f: 1, M: 1, l: 1, p: 1, o: 1 }
  console.log(parseString("nmjlw12hrjeh54ah")); //{ n: 1, m: 1, j: 2, l: 1, w: 1, h: 3, r: 1, e: 1, a: 1 }
  console.log(parseString("")); //{}
-
-
