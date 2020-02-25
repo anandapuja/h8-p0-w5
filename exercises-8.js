@@ -1,5 +1,10 @@
+//Logic Challenge - Cari Pelaku (Regex)
+
 function cariPelaku(str) {
     // you can only write your code here!
+    let pelaku = str.match(/abc/gi).length;
+    // console.log(pelaku);
+    return pelaku;
   }
   
   // TEST CASES
